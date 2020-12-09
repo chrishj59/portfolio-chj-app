@@ -6,9 +6,15 @@ import BlogApi from "lib/api/blogs";
 import { Row, Col } from "reactstrap";
 import { SlateView } from "slate-simple-editor";
 import Avatar from "components/shared/Avatar";
+import { useRouter } from "next/router";
 
 const BlogDetail = ({ blog, authour }) => {
 	const { data, loading } = useGetUser();
+	const router = useRouter();
+
+	if (router.isFallback) {
+		return <div>Loading blog</div>;
+	}
 
 	return (
 		<BaseLayout user={data} loading={loading}>
@@ -18,13 +24,18 @@ const BlogDetail = ({ blog, authour }) => {
 				className="slate-container">
 				<Row>
 					<Col md={{ size: 8, offset: 2 }}>
-						<Avatar
-							image={authour.picture}
-							title={authour.name}
-							date={blog.createdAt}
-						/>
-						<hr />
-						<SlateView initialContent={blog.content} />
+						{router.isFallback && <h1>Loading blog.....</h1>}
+						{!router.isFallback && (
+							<>
+								<Avatar
+									image={authour.picture}
+									title={authour.name}
+									date={blog.createdAt}
+								/>
+								<hr />
+								<SlateView initialContent={blog.content} />
+							</>
+						)}
 					</Col>
 				</Row>
 			</BasePage>
@@ -36,7 +47,7 @@ export async function getStaticPaths() {
 	const { data } = await new BlogApi().getAll();
 	// const blogs = json.data;
 	const paths = data.map(({ blog }) => ({ params: { slug: blog.slug } }));
-	return { paths, fallback: false };
+	return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }) {
