@@ -43,7 +43,7 @@ export async function getStaticProps({ params }) {
 	const {
 		data: { blog, authour },
 	} = await new BlogApi().getBySlug(params.slug);
-	return { props: { blog, authour } };
+	return { props: { blog, authour }, revalidate: 1 };
 }
 
 export default BlogDetail;

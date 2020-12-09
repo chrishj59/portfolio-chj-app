@@ -5,7 +5,7 @@ import Link from "next/link";
 import BaseLayout from "@/components/layouts/BaseLayout";
 import BasePage from "@/components/BasePage";
 import withAuth from "hoc/withAuth";
-import MastHead from "Components/shared/Masthead";
+import MastHead from "components/shared/Masthead";
 import PortDropdown from "components/shared/Dropdown";
 import { toast } from "react-toastify";
 
