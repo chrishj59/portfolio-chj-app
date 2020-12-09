@@ -7,11 +7,12 @@ import { useGetUser } from "@/actions/user";
 
 const ROLES = [
 	"Developer",
+	"SAP configuation",
 	"Tech Lover",
 	"Team Player",
-	"Course Creator",
-	"React.js",
-	"Angular",
+	"React.js and NextJS",
+	"Node",
+	"Postgresql",
 ];
 const Index = () => {
 	const [isFlipping, setIsFlipping] = useState(false);
@@ -78,9 +79,9 @@ const Index = () => {
 							<Col md="6" className="hero-welcome-wrapper">
 								<div className="hero-welcome-text">
 									<h1>
-										Welcome to the portfolio website of Filip Jerga. Get
-										informed, collaborate and discover projects I was working on
-										through the years!
+										Welcome to the portfolio website of Chris Hunter-Johnson.
+										Have a look at some of the projects I have worked on through
+										the years
 									</h1>
 								</div>
 								<Typed
@@ -95,7 +96,7 @@ const Index = () => {
 									cursorChar="|"
 								/>
 								<div className="hero-welcome-bio">
-									<h1>Let's take a look on my work.</h1>
+									<h1>Let's take a look on my work on the profile pages.</h1>
 								</div>
 							</Col>
 						</Row>

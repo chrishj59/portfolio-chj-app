@@ -28,11 +28,9 @@ const About = (props) => {
 					<Col md="6">
 						<div className="left-side">
 							<h1 className={`title ${createFadeInClass()}`}>Hello, Welcome</h1>
-							<h4 className={`subtitle ${createFadeInClass()}`}>
-								To About Page
-							</h4>
+							<h4 className={`subtitle ${createFadeInClass()}`}>About Page</h4>
 							<p className={`subsubTitle ${createFadeInClass()}`}>
-								Feel free to read short description about me.
+								Feel free to the read short description about me.
 							</p>
 						</div>
 					</Col>
@@ -44,18 +42,17 @@ const About = (props) => {
 								tools such as React and Node.{" "}
 							</p>
 							<p>
-								I have a Master's degree in Artificial Intelligence and several
-								years of experience working on a wide range of technologies and
-								projects from C++ development for ultrasound devices to modern
-								mobile and web applications in React and Angular.
+								I am a qualified accountant who has moved into SAP configuration
+								and development within the Finance and Asset management modules.
+								With the advent of S/4HANA I have extended my skillset to
+								include modern web technologies including React, Next (server
+								side rendering), NodeJs, Postgresql and MongoDB databases
 							</p>
+
 							<p>
 								Throughout my career, I have acquired advanced technical
-								knowledge and the ability to explain programming topics clearly
-								and in detail to a broad audience. I invite you to take my
-								course, where I have put a lot of effort to explain web and
-								software engineering concepts in a detailed, hands-on and
-								understandable way.
+								knowledge and the ability to explain their use and benefits in
+								an understandable way.
 							</p>
 						</div>
 					</Col>
